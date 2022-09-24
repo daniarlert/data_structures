@@ -5,7 +5,7 @@ This sorting algorithm sorts a list or collection by sorting
 a subset of the list and expanding this sorted range until the
 entire list is in order. This is done by comparing adjacent
 elements, when it finds that the order is not correct, it moves
-the element compared baward until the order is correct.
+the element compared backwards until the order is correct.
 
 It has a cost of O(n^2) in the worst case sceneario.
 
