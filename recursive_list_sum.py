@@ -26,11 +26,14 @@ def recursive_list_sum(l: list) -> int:
 
     if len(l) == 0:
         return 0
+    elif len(l) == 1:
+        return l[0]
     else:
-        head = l[0]
-        tail = l[1:]
+        mid = len(l)//2
+        left = recursive_list_sum(l[0:mid])
+        right = recursive_list_sum(l[mid:len(l) + 1])
 
-        return head + recursive_list_sum(tail)
+        return left + right
 
 
 if __name__ == '__main__':
