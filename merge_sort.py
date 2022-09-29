@@ -72,3 +72,13 @@ def merge_sort(l: list) -> list:
             break
 
     return sorted
+
+
+if __name__ == '__main__':
+    from doctest import testmod
+
+    testmod()
+
+    user_input = input('Enter numbers separated by a comma: ').strip()
+    unsorted = [int(item) for item in user_input.split(',')]
+    print(f'{merge_sort(unsorted) = }')
