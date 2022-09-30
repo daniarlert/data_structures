@@ -8,12 +8,9 @@ For manual testing:
 python memoized_fib.py
 """
 
-"""Dictionary to save previous calculations."""
-
-
-
-
 from functools import lru_cache
+
+
 @lru_cache()
 def memo_fib(nth_number: int) -> int:
     """Memoized version of the fibonacci algorithm.
