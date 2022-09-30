@@ -9,9 +9,12 @@ python memoized_fib.py
 """
 
 """Dictionary to save previous calculations."""
-cache = {}
 
 
+
+
+from functools import lru_cache
+@lru_cache()
 def memo_fib(nth_number: int) -> int:
     """Memoized version of the fibonacci algorithm.
 
@@ -25,17 +28,12 @@ def memo_fib(nth_number: int) -> int:
     6765
     """
 
-    if nth_number in cache:
-        return cache[nth_number]
-
     if nth_number == 1 or nth_number == 2:
-        cache[nth_number] = 1
         return 1
     else:
         result = memo_fib(nth_number - 1)
         result += memo_fib(nth_number - 2)
 
-        cache[nth_number] = result
         return result
 
 
